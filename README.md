@@ -9,3 +9,6 @@ A continuacion presentaremos el primer avance del diagrama desde donde partimos 
 ## Segundo Avance del diagrama
 
 ![image](https://github.com/Santiagote/BrazoRobotico/assets/166523171/d49ee381-4966-4491-823d-7e8a3d5247a3)
+
+## Mejora UML
+![UML_Brazo](https://github.com/Santiagote/BrazoRobotico/assets/166561281/799247a4-ab61-4cc4-95e0-13e259db22df)
