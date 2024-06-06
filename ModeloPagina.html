@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus - Principal</title>
+  <style>
+    /* Estilos del fondo y otros elementos */
+    body {
+      background-color: #000;
+      font-family: Arial, sans-serif; /* Fuente del texto */
+      color: #00FF00; /* Color del texto */
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    section {
+      background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para secciones */
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #008000; /* Color de fondo del botón */
+      color: white; /* Color del texto del botón */
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-right: 10px; /* Espacio entre los botones */
+    }
+
+    button:hover {
+      background-color: #00FF00; /* Color de fondo del botón al pasar el cursor */
+    }
+
+    #controlesBrazo {
+      display: none;
+    }
+
+    .control {
+      margin-bottom: 10px;
+    }
+
+    #informacion {
+      display: none;
+    }
+
+    #ingresoUsuario, #registro {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #ingresoUsuario input[type="text"],
+    #ingresoUsuario input[type="password"] {
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    #ingresoUsuario button, #registro button {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nexus</h1>
+</header>
+
+<section id="ingresoUsuario">
+  <h2>Ingreso de Usuario</h2>
+  <input type="text" id="nombreUsuario" placeholder="Nombre de usuario">
+  <input type="password" id="contraseña" placeholder="Contraseña">
+  <button onclick="ingresar()">Ingresar</button>
+</section>
+
+<section id="registro">
+  <h2>Registro</h2>
+  <input type="text" id="nombreRegistro" placeholder="Nombre de usuario">
+  <input type="password" id="contraseñaRegistro" placeholder="Contraseña">
+  <button onclick="registrar()">Registrarse</button>
+</section>
+
+<section id="creadores">
+  <h2>Información de los Desarrolladores</h2>
+  <p>Desarrollado por Wagner Balcazar, Carlos Guajala, Santiago Jimenez, Sebastian Narvaez y Roberto Lliguin.</p>
+</section>
+
+<section id="controles">
+  <h2>Interfaz de Control</h2>
+  <button onclick="mostrarControles()">Mostrar Controles</button>
+  <div id="controlesBrazo">
+    <div class="control">
+      <h3>Control de Brazo</h3>
+      <button onclick="controlarBrazo('abrir')">Abrir Pinza</button>
+      <button onclick="controlarBrazo('cerrar')">Cerrar Pinza</button>
+    </div>
+    <div class="control">
+      <h3>Control de Carro</h3>
+      <button onclick="controlarCarro('avanzar')">Avanzar</button>
+      <button onclick="controlarCarro('retroceder')">Retroceder</button>
+      <button onclick="controlarCarro('izquierda')">Izquierda</button>
+      <button onclick="controlarCarro('derecha')">Derecha</button>
+    </div>
+  </div>
+</section>
+
+<button onclick="mostrarInformacion()">Mostrar Información de Desarrolladores</button>
+
+<script>
+  function mostrarControles() {
+    var controlesBrazo = document.getElementById('controlesBrazo');
+    if (controlesBrazo.style.display === 'none') {
+      controlesBrazo.style.display = 'block';
+    } else {
+      controlesBrazo.style.display = 'none';
+    }
+  }
+
+  function controlarBrazo(accion) {
+    // Lógica para controlar el brazo (abrir/cerrar pinza)
+    console.log('Control de brazo:', accion);
+  }
+
+  function controlarCarro(accion) {
+    // Lógica para controlar el carro (av
