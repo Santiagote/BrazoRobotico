@@ -1,5 +1,5 @@
 """
-URL configuration for PaginaWebNexus project.
+URL configuration for myproject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -17,17 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from IngresoPaginaWeb.views import home, controles, descripcion
-from . import views
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'),
-    path('controles/', controles, name='controles'),
-    path('grabar_objetos/', views.vista_grabar_objetos, name='grabar_objetos'),
-    path('recoger_objetos/', views.vista_recoger_objetos, name='recoger_objetos'),
-    path('descripcion/', descripcion, name='descripcion'),
 ]
-
-

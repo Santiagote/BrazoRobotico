@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Brazo Robótico</title>
+</head>
+<body>
+
+<header>
+    <h1>Control de Brazo Robótico</h1>
+</header>
+
+<section id="controles">
+    <h2>Interfaz de Control</h2>
+    <button onclick="mostrarControles()">Mostrar Controles</button>
+    <div id="controlesBrazo" style="display: none;">
+        <div>
+            <h3>Control de Pinza</h3>
+            <button onclick="controlarPinza('abrir')">Abrir Pinza</button>
+            <button onclick="controlarPinza('cerrar')">Cerrar Pinza</button>
+        </div>
+            <h3>Control de Brazo</h3>
+            <button onclick="controlarBrazo('subir')">Subir Brazo </button>
+            <button onclick="controlarBrazo('bajar')">Bajar Brazo </button>
+        <div>
+            <h3>Control de Carro</h3>
+            <button onclick="controlarCarro('avanzar')">Avanzar</button>
+            <button onclick="controlarCarro('retroceder')">Retroceder</button>
+            <button onclick="controlarCarro('izquierda')">Izquierda</button>
+            <button onclick="controlarCarro('derecha')">Derecha</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    function mostrarControles() {
+        var controlesBrazo = document.getElementById('controlesBrazo');
+        if (controlesBrazo.style.display === 'none') {
+            controlesBrazo.style.display = 'block';
+        } else {
+            controlesBrazo.style.display = 'none';
+        }
+    }
+    
+    function controlarPinza(accion) {
+        // Lógica para controlar la pinza (abrir/cerrar pinza)
+        console.log('Control de pinza:', accion);
+    }
+    
+    function controlarBrazo(accion){
+        // Logica para controlar el brazo (subir/bajar brazo)
+        console.log('Control de Brazo:', accion);
+    }
+    
+    function controlarCarro(accion) {
+        // Lógica para controlar el carro (avanzar/retroceder/izquierda/derecha)
+        console.log('Control de carro:', accion);
+    }
+</script>
+
+</body>
+</html>
