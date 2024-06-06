@@ -1,5 +1,6 @@
 # BrazoRobotico
-A continuacion presentaremos el primer avance del diagrama desde donde partimos para poder realizar nuestro brazo robotico
+A continuacion presentaremos el primer avance del diagrama desde donde partimos para poder realizar nuestro brazo robotico.
+
 El primer diaframa UML representa las principales caracteristicas y funciones que tendra nuesto proyecto TELEROBOT. 
 
 ## Primer Avance 
