@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Brazo Robótico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <nav   class="nav justify-content-end">
+        <ul class="nav nav-tabs">
+            <li class = "nav-item">
+                <a class =  "nav-link  " href = {% url 'home' %}>
+                    <button class="btn btn-outline-success" >Inicio</button>
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a class = "nav-link "  href={% url 'descripcion' %}>
+                    <button class="btn btn-outline-success" >Descripcion</button>
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a class = "nav-link " href={% url 'controles' %} }>
+                    <button class="btn btn-outline-success" >Control</button>
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a class = "nav-link " href={% url 'registro' %}>
+                    <button class="btn btn-outline-success" >Registro</button>
+                </a>
+            </li>
+            <li class = "nav-item">
+                <a class = "nav-link " href={% url 'Login' %}>
+                    <button class="btn btn-outline-success" >Login</button>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <style>
+        body {
+            background-image: url('https://media.discordapp.net/attachments/1176322871669305486/1248400497648599070/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-52393.png?ex=66638710&is=66623590&hm=e3dcfbfa41644a2447b75954284b4512ec583bc629e8f76371761b0b5739f4aa&=&format=webp&quality=lossless&width=782&height=418');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            color: green;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .nav {
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .nav-link {
+            color: white !important;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2, h3 {
+            color: green;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .left-column, .right-column {
+            flex: 1;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .control-section {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .control-section h3 {
+            text-align: center;
+        }
+        .control-section button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .control-section button:hover {
+            background-color: darkgreen;
+        }
+        #camera, #radar {
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .control-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .control-buttons .btn {
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        .control-buttons .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .control-buttons .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Control de Brazo Robótico</h1>
+</header>
+
+<div class="container">
+    <section id="controles">
+        <h2>Interfaz de Control</h2>
+        <button onclick="mostrarControles()" class="btn btn-outline-success">Mostrar Controles</button>
+    </section>
+
+    <div class="main-content">
+        <div class="left-column">
+            <div id="camera" class="control-section">
+                <h3>Cámara</h3>
+            </div>
+            <div id="radar" class="control-section">
+                <h3>Radar</h3>
+            </div>
+        </div>
+        <div class="right-column" id="controlesBrazo" style="display: none;">
+            <div class="control-section">
+                <h3>Control de Pinza</h3>
+                <button onclick="controlarPinza('abrir')">Abrir Pinza</button>
+                <button onclick="controlarPinza('cerrar')">Cerrar Pinza</button>
+            </div>
+            <div class="control-section">
+                <h3>Control de Brazo</h3>
+                <button onclick="controlarBrazo('subir')">Subir Brazo</button>
+                <button onclick="controlarBrazo('bajar')">Bajar Brazo</button>
+            </div>
+            <div class="control-section">
+                <h3>Control de Carro</h3>
+                <div class="control-buttons">
+                    <div class="column">
+                        <button class="btn btn-primary" onclick="controlarCarro('avanzar')">W</button>
+                        <div class="row">
+                            <button class="btn btn-primary" onclick="controlarCarro('izquierda')">A</button>
+                            <button class="btn btn-primary" onclick="controlarCarro('retroceder')">S</button>
+                            <button class="btn btn-primary" onclick="controlarCarro('derecha')">D</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function mostrarControles() {
+        var controlesBrazo = document.getElementById('controlesBrazo');
+        if (controlesBrazo.style.display === 'none') {
+            controlesBrazo.style.display = 'block';
+        } else {
+            controlesBrazo.style.display = 'none';
+        }
+    }
+
+    function controlarPinza(accion) {
+        console.log('Control de pinza:', accion);
+    }
+
+    function controlarBrazo(accion) {
+        console.log('Control de Brazo:', accion);
+    }
+
+    function controlarCarro(accion) {
+        console.log('Control de carro:', accion);
+    }
+</script>
+</body>
+</html>
