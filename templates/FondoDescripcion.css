@@ -1,0 +1,6 @@
+body {
+    background-image: url('https://media.discordapp.net/attachments/1176322871669305486/1248400497648599070/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-52393.png?ex=66638710&is=66623590&hm=e3dcfbfa41644a2447b75954284b4512ec583bc629e8f76371761b0b5739f4aa&=&format=webp&quality=lossless&width=782&height=418');
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
