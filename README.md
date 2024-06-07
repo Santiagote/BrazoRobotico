@@ -16,3 +16,8 @@ comunicarán unas con otras para obtener resultados más eficientes.
 
 ## Mejora UML
 ![UML_Brazo](https://github.com/Santiagote/BrazoRobotico/assets/166561281/799247a4-ab61-4cc4-95e0-13e259db22df)
+Pequeña modificación en el diagrama
+![image](https://github.com/Santiagote/BrazoRobotico/assets/166523273/6d629e0c-dd8b-4a2a-ba90-d41b91998be3)
+![image](https://github.com/Santiagote/BrazoRobotico/assets/166523273/655a109b-e04d-4fd1-b67f-470242569443)
+![image](https://github.com/Santiagote/BrazoRobotico/assets/166523273/4c8463fa-8d60-4005-a807-8610a41b2f90)
+![image](https://github.com/Santiagote/BrazoRobotico/assets/166523273/f0bb6c18-2b6b-4e00-bb1a-822a66787dac)
