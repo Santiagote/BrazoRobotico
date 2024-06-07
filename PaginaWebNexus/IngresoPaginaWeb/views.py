@@ -23,5 +23,8 @@ def vista_recoger_objetos(request):
 def descripcion(request):
     return render(request, 'descripcion.html')
 
-def Registro (request):
-    return render(request, 'Registro.html')
+def registro (request):
+    return render(request, 'registro.html')
+
+def Login(request):
+        return render(request,'Login.html')

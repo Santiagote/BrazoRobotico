@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from IngresoPaginaWeb.views import home, controles, descripcion
+from IngresoPaginaWeb.views import home, controles, descripcion, registro, Login
 from . import views
 
 
@@ -28,6 +28,8 @@ urlpatterns = [
     path('grabar_objetos/', views.vista_grabar_objetos, name='grabar_objetos'),
     path('recoger_objetos/', views.vista_recoger_objetos, name='recoger_objetos'),
     path('descripcion/', descripcion, name='descripcion'),
+    path('registro/', registro, name='registro'),
+    path('Login/', Login, name='Login'),
 ]
 
 

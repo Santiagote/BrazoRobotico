@@ -1,40 +1,28 @@
 body {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-image: url("https://www.redaccionmedica.com/images/destacados/desarrollan-un-brazo-robotico-que-detecta-senales-de-los-nervios-espinales-4764_620x368.jpg");
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
-
-
-
 }
 
+body{
+    background-color: white;
+}
 
-.container{
-    background: #000;
+header{
+    background-color: black;
     display: flex;
-    justfique-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.button{
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
-    background: skyblue;
-    box-shadow: 0 0 5px skyblue,
-                0 0 25px skyblue;
-    transition: all 0.4s ease;
-    cursor: pointer;
+.barra-negra ul li {
+    margin-right: 100px;
 }
 
-button:hover{
-    box-shadow: 0 0 5px skyblue,
-                0 0 25px skyblue,
-                0 0 50px skyblue,
-                0 0 100px skyblue,
-                0 0 200px skyblue;
+.barra-negra ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.barra-negra ul li a:hover {
+    text-decoration: underline;
 }
