@@ -5,6 +5,7 @@ from Controles.camera import grabar_objetos
 from Controles.pinza import recoger_datos_objeto
 
 
+
 def home(request):
     return render(request, 'index.html')
 
@@ -23,8 +24,13 @@ def vista_recoger_objetos(request):
 def descripcion(request):
     return render(request, 'descripcion.html')
 
-def registro (request):
-    return render(request, 'registro.html')
+
+def registro(request):
+   return render(request, 'registro.html')
+
+
 
 def Login(request):
-        return render(request,'Login.html')
+    return render(request, 'login.html')
+
+

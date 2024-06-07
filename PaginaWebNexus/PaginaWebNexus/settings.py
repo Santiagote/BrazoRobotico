@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "IngresoPaginaWeb.apps.IngresopaginawebConfig",
-    "Controles.apps.ControlesConfig"
+    "Controles.apps.ControlesConfig",
 ]
 
 MIDDLEWARE = [
