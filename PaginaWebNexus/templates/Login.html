@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Inicio de Sesión</title>
+
+    <style>
+        body {
+            background-image: url('https://cdn.discordapp.com/attachments/1176322871669305486/1248400497648599070/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-52393.png?ex=66638710&is=66623590&hm=e3dcfbfa41644a2447b75954284b4512ec583bc629e8f76371761b0b5739f4aa&'); /* Ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #00FF00;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Permite colocar elementos uno debajo del otro */
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em; /* Tamaño del texto del encabezado */
+        }
+
+        #login-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el contenedor */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        #login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        #login-container input[type="text"],
+        #login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            color: #00FF00; /* Color del texto de los inputs */
+            background-color: #333; /* Color de fondo de los inputs */
+        }
+
+        #login-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #008000; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            cursor: pointer;
+        }
+
+        #login-container button:hover {
+            background-color: #00FF00; /* Color de fondo del botón al pasar el cursor */
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Bienvenidos</h1>
+</header>
+
+<div id="login-container">
+    <h2>Inicio de Sesión</h2>
+    <input type="text" id="nombreUsuario" placeholder="Nombre de usuario">
+    <input type="password" id="contraseña" placeholder="Contraseña">
+    <button onclick="ingresar()">Ingresar</button>
+</div>
+
+<script>
+    function ingresar() {
+        var nombreUsuario = document.getElementById('nombreUsuario').value;
+        var contraseña = document.getElementById('contraseña').value;
+        alert('Ingresando con: ' + nombreUsuario);
+        
+    }
+</script>
+</body>
+</html>
