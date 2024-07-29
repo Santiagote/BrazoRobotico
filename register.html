@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="path/to/bootstrap.css">
+    <link rel="stylesheet" href="path/to/font-awesome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/register.css">
+</head>
+<body>
+    <button onclick="window.history.back();" class="btn btn-secondary mt-3 top-right-button">Regresar</button>
+    <div class="transparent-box">
+        <div class="inner-box">
+            <div class="header">
+                <h1>Registro</h1>
+            </div>
+            <form action="registrar.php" method="post">
+                <input type="text" name="username" placeholder="Usuario" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="password" name="confirm_password" placeholder="Confirmar Contraseña" required>
+                <input  type="submit" name="register" value="Crear Cuenta">
+            </form>
+            <a href="login.html">¿Ya tienes una cuenta?. Inicia sesión</a>
+        </div>
+    </div>
+
+
+        <!-- Start Script -->
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/templatemo.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <!-- End Script -->
+</body>
+</html>
