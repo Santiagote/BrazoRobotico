@@ -1,0 +1,64 @@
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .carousel-item {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .text-success {
+    color: #bb86fc !important;
+}
+
+.bg-success {
+    background-color: #28a745 !important; /* Verde */
+}
+
+.bg-dark-mode {
+    background-color: #343a40 !important; /* Gris */
+}
+
+body.dark-mode h1 {
+    color: #bb86fc; /* Morado */
+}
+
+/* Estilos por defecto para el modo claro */
+.card {
+    background-color: #ffffff; /* Blanco */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode .card {
+    background-color: #343a40; /* Gris oscuro */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Estilos para el overlay de la imagen */
+body.dark-mode .card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+/* Estilos por defecto para enlaces */
+a {
+    color: #000000; /* Negro por defecto */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode .text-purple-dark-mode {
+    color: #bb86fc !important; /* Color morado */
+}
+
+body.dark-mode .nav-icon i {
+    color: #bb86fc !important; /* Color morado para los iconos */
+}
+
+/* Asegúrate de que los enlaces también cambien de color */
+body.dark-mode a.nav-link,
+body.dark-mode a.h {
+    color: #bb86fc !important; /* Color morado para los enlaces */
+}
+
+body.dark-mode .navbar-toggler-icon {
+    background-color: #bb86fc !important; /* Color morado para las líneas del menú */
+}
